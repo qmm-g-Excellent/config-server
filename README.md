@@ -25,6 +25,21 @@ out of scope：
 
 
 
+## 下载RabbitMQ镜像 
+``` docker pull rabbitmq:management ``` 
+## 启动RabbitMQ 
+``` docker run -d --name uwo-rabbitmq --publish 5671:5671 --publish 5672:5672 --publish 4369:4369 --publish 25672:25672 --publish 15671:15671 --publish 15672:15672 rabbitmq:management ```
+ 
+## 设置默认用户与密码 
+``` docker run -d --name uwo-rabbitmq -e RABBITMQ_DEFAULT_USER=uwo -e RABBITMQ_DEFAULT_PASS=yan5845hao rabbitmq:management ``` 
+
+## 设置默认的vhost 
+``` docker run -d --name uwo-rabbitmq -e RABBITMQ_DEFAULT_VHOST=uwo rabbitmq:management ```
+ ## 运行的界面地址 
+ ``` http://10.211.55.8:15672/ ```
+
+
+
 
 
     

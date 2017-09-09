@@ -6,11 +6,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+//@SpringBootTest
 public class ConfigServerApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+        System.out.println("------------------->" + getLength("a", "b", "c"));
+    }
+
+    public int getLength(String... strings) {
+        return strings.length;
+    }
 
 }
